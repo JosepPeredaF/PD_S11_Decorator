@@ -11,6 +11,11 @@ public class Soya extends Decorator{
 
     @Override
     public double costo() {
-        return cafe.costo()+ 0.15;
+        switch (cafe.getTamano()) {
+            case N: return cafe.costo() + 0.15;
+            case M: return cafe.costo() + 0.20;
+            case G: return cafe.costo() + 0.25;
+        }
+        return cafe.costo();
     }
 }

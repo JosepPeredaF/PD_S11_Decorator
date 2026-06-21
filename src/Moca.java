@@ -10,6 +10,11 @@ public class Moca extends Decorator{
 
     @Override
     public double costo() {
-        return cafe.costo() + 0.20;
+        switch (cafe.getTamano()) {
+            case N: return cafe.costo() + 0.20;
+            case M: return cafe.costo() + 0.25;
+            case G: return cafe.costo() + 0.30;
+        }
+        return cafe.costo();
     }
 }

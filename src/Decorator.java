@@ -5,4 +5,9 @@ public abstract class Decorator implements Cafe{
     public Decorator(Cafe cafe) {
         this.cafe = cafe;
     }
+
+    @Override
+    public Tamano getTamano() {
+        return cafe.getTamano();
+    }
 }

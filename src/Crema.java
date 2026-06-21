@@ -11,6 +11,11 @@ public class Crema extends Decorator{
 
     @Override
     public double costo() {
-        return cafe.costo() + 0.10;
+        switch (cafe.getTamano()) {
+            case N: return cafe.costo() + 0.10;
+            case M: return cafe.costo() + 0.15;
+            case G: return cafe.costo() + 0.20;
+        }
+        return cafe.costo();
     }
 }
